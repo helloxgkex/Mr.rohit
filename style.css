@@ -8,6 +8,10 @@ body {
   background: linear-gradient(rgb(0, 249, 236), rgb(71, 150, 229));
 }
 
+main {
+    margin: 20px;
+}
+
 #noButton {
   position: absolute;
   margin-left: 150px;

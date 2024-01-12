@@ -20,53 +20,52 @@
 </head>
 
 <body>
+    <div class="container">
+      <div>
+        <h6 class="header_text"> <p>Hey krissa</p>
+            <p>Imagine we embark on an unforgettable adventure together...</p>
+            <p>Our journey takes us to incredible places and magical moments...</p>
+            <p>Would you be my partner in this adventure and go out with me?</p></h6>
+      </div>
+      <p>
+        <a href="https://www.instagram.com/mr.psycho1official?igsh=b3R1ZG03NHI0dXk3">@Rohit</a>
+      </p>
+      <div class="gif_container">
+        <img
+          src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No
+        </button>
 
-    <header>
-       <h1>An Unforgettable Adventure</h1>
-    </header>
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
 
-    <main>
-       <h3> <p>Hey krissa</p>
-        <p>Imagine we embark on an unforgettable adventure together...</p>
-        <p>Our journey takes us to incredible places and magical moments...</p>
-        <p>Would you be my partner in this adventure and go out with me?</p>
-        </h3>
-        <div class="container">
-            <div>
-            </div>
-            <p>
-              <a href="https://www.instagram.com/mr.psycho1official?igsh=b3R1ZG03NHI0dXk3">@Rohit</a>
-            </p>
-            <div class="gif_container">
-              <img src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif" alt="Cute animated illustration">
-            </div>
-            <div class="buttons">
-              <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-              <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">
-                No
-              </button>
-      
-              <script>
-                function nextPage() {
-                  window.location.href = "yes.html";
-                }
-      
-                function moveButton() {
-                  var x =
-                    Math.random() *
-                    (window.innerWidth -
-                      document.getElementById("noButton").offsetWidth);
-                  var y =
-                    Math.random() *
-                    (window.innerHeight -
-                      document.getElementById("noButton").offsetHeight);
-                  document.getElementById("noButton").style.left = `${x}px`;
-                  document.getElementById("noButton").style.top = `${y}px`;
-                }
-              </script>
-            </div>
-          </div>
-        
-
-</body>
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
 </html>
