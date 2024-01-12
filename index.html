@@ -6,53 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>An Unforgettable Adventure</title>
     <style>
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Just for fun, change it if you prefer a different font */
-            background-color: #fefefe;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-        }
+       body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-        header {
-            background-color: #ff66b2; /* Light pink color, you can change it */
-            color: #fff;
-            padding: 15px;
-        }
+  background: linear-gradient(rgb(0, 249, 236), rgb(71, 150, 229));
+}
 
-        main {
-            margin: 20px;
-        }
+#noButton {
+  position: absolute;
+  margin-left: 150px;
+  transition: 0.5s;
+  margin-top: 30px;
+}
 
-        h1 {
-            color: #333;
-        }
+#yesButton {
+  position: absolute;
+  margin-right: 150px;
+  margin-top: 30px;
+}
 
-        p {
-            color: #555;
-            font-size: 1.2em;
-        }
+.header_text {
+  font-family: "Nunito";
+  font-size: 50px;
+  font-weight: bold;
 
-        button {
-            background-color: #ff66b2; /* Light pink color, you can change it */
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
 
-        button:hover {
-            background-color: #e64d89; /* Darker pink color, you can change it */
-        }
+.text {
+  font-family: "Nunito";
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.btn {
+  background-color: #017cff;
+  color: white;
+  font-weight: 600;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 3px black;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #017cff;
+}
+
+.gif_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  color: white;
+  margin-left: 50%;
+}
+p a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.25;
+}
+
     </style>
 </head>
+
 <body>
 
     <header>
@@ -60,22 +105,52 @@
     </header>
 
     <main>
-        <p>Hey my love,</p>
+       <h3> <p>Hey my love,</p>
         <p>Imagine we embark on an unforgettable adventure together...</p>
-        <img
-        src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif"
-        alt="Cute animated illustration"
-      />        <p>Our journey takes us to incredible places and magical moments...</p>
+        <p>Our journey takes us to incredible places and magical moments...</p>
         <p>Would you be my partner in this adventure and go out with me?</p>
-        <button onclick="joinAdventure()">Yes, I'm ready for the adventure!</button>
+        </h3>
+        <div class="container">
+            <div>
+              
+            </div>
+            <div class="gif_container">
+              <img
+                src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif"
+                alt="Cute animated illustration"
+              />
+            </div>
+            <div class="buttons">    
+      <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+      <button
+        class="btn"
+        id="noButton"
+        onmouseover="moveButton()"
+        onclick="moveButton()"
+      >
+        No
+      </button>
+
     </main>
 
     <script>
-        function joinAdventure() {
-            alert("Get ready for an amazing adventure together!");
-            // You can add further actions, like redirecting to a contact form or displaying a thank you message
-        }
-    </script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        </script>
 
 </body>
 </html>
