@@ -36,20 +36,39 @@
      
       <div class="buttons">
         <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-        <button class="btn" id="noButton" onclick="moveButton()" onclick="moveButton()">No</button>
+        <button id="noButton" onclick="startRandomizing()">No</button>
       
         <script>
           function nextPage() {
             window.location.href = "https://helloxgkex.github.io/mine/";
           }
-          
-          function moveButton() {
-              window.location.href = "https://helloxgkex.github.io/my_fan/";
-              
-             
-          }
-          
         </script>
+
+        
+          <script>
+  const noButton = document.getElementById('noButton');
+  let repeatCount = 0;
+  const maxRepeat = 3; // Change this to the desired number of repetitions
+
+  // Function to set random position on hover
+  const setRandomPosition = () => {
+      noButton.style.left = `calc(50% + ${(Math.random() - 0.5) * 100}px)`;
+      noButton.style.top = `calc(50% + ${(Math.random() - 0.5) * 100}px)`;
+  };
+
+  // Function to handle button click
+  const startRandomizing = () => {
+      repeatCount++;
+
+      // Change position for a fixed number of times
+      if (repeatCount <= maxRepeat) {
+          setRandomPosition();
+      } else {
+          // After reaching the maximum repetition, redirect to another file
+          window.location.href = 'https://helloxgkex.github.io/my_fan/'; // Change this to the desired file
+      }
+  };
+</script>
       </div>
     </div>
   </body>
