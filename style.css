@@ -13,10 +13,23 @@ main {
 }
 
 #noButton {
+  background-color: #20c0e9;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 3px 3px black;
   position: absolute;
   margin-left: 150px;
-  transition: 0.5s;
-  margin-top: 30px;
+  transition: 0.5s ;
+  font-size: 16px;
+  margin-top: 35px;
+  transform: translate(-50%, -10%);
+  padding:16px 36px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+    display: inline-block;
+
 }
 
 #yesButton {
@@ -40,7 +53,7 @@ main {
   font-family: "Nunito";
   font-size: 25px;
   font-weight: bold;
-  color: white;
+  color: rgb(155, 18, 18);
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0px;
@@ -56,13 +69,13 @@ main {
 }
 
 .btn {
-  background-color: #017cff;
-  color: white;
+  background-color: #20c0e9;
+  color: rgb(255, 255, 255);
   font-weight: 600;
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
   margin: 4px 2px;
   cursor: pointer;
   border: none;
@@ -73,13 +86,17 @@ main {
 
 .btn:hover {
   background-color: #ffffff;
-  color: #017cff;
+  color: #0fbfeb;
+  position: absolute;
+  left:calc(50% + ${(Math.random() - 0.5) * 100}px);
+  top:calc(50% + ${(Math.random() - 0.5) * 100}px);
 }
 
 .gif_container {
   display: flex;
   justify-content: center;
   align-items: center;
+  size-adjust:20px  20px;
 }
 p {
   color: white;
@@ -89,5 +106,5 @@ p a {
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-weight: 600;
-  opacity: 0.25;
+  opacity: 0.50;
 }
